@@ -1,4 +1,3 @@
-//Pending getText();
 
 package assignmentweek2;
 
@@ -59,19 +58,13 @@ public class TwoDeleteLead {
 		chrome.findElement(By.xpath("//input[@name='id']")).sendKeys(leadId);
 		chrome.findElement(By.xpath("//button[text()='Find Leads']")).click();
 		
-		//chrome.findElement(By.xpath("//input[@name='id']")).sendKeys("19857"); //19832
-		//String message=chrome.findElement(By.xpath("//div[@class='x-paging-info']")).getText();
-		//String message=chrome.findElement(By.className("x-paging-info")).getText();
-/*		
 		//Get the message from the paging info and confirm the successful deletion.
 		String liMessage=chrome.findElement(By.xpath("//div[@class='x-panel-bbar']/div/div")).getText();
-		//System.out.println("Message: "+ message);
-		
+				
 		if(liMessage.equals("No records to display")) {
 			System.out.println("Lead Deleted Successfully");
 		}
-*/
-		chrome.close();
 		
+		chrome.close();
 	}
 }
