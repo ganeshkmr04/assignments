@@ -32,7 +32,7 @@ public class TwoDuplicateLead {
 		chrome.findElement(By.linkText("Leads")).click();
 		chrome.findElement(By.linkText("Find Leads")).click();
 
-		//Click on Phone Tab and Enter mobile number and Click on Find Leads Button
+		//Click on Phone Tab and Enter mail id and Click on Find Leads Button
 		chrome.findElement(By.xpath("//li[@class=' x-tab-strip-active']/following-sibling::li/following-sibling::li/a[2]")).click();
 		chrome.findElement(By.xpath("//input[@name='emailAddress']")).sendKeys("ganeshkumar65@gmail.com");
 		chrome.findElement(By.xpath("//button[text()='Find Leads']")).click();
@@ -46,8 +46,9 @@ public class TwoDuplicateLead {
 
 		//Verifying the tile is Duplicate Lead
 		if(chrome.findElement(By.id("sectionHeaderTitle_leads")).getText().equals("Duplicate Lead")) {
+			
 			//Click on Create Lead submit button which create duplicate lead
-			chrome.findElement(By.xpath("//input[@name='submitButton']")).click();
+			chrome.findElement(By.xpath("//input[@name='submitButton']")).click();s
 		}
 
 		//Confirming the Duplicate Lead created by Name.
