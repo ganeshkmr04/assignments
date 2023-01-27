@@ -13,11 +13,10 @@ public class ReadDataFromExcel {
 		XSSFWorkbook wb=new XSSFWorkbook("./data/salesForce.xlsx");
 		XSSFSheet ws=wb.getSheet(SheetName);
 		XSSFCell cell;
-		int rowcount=ws.getLastRowNum();
-		int cellCount=ws.getRow(0).getLastCellNum();
 		String cellValue;
 		Double cellValueNum;
-		
+		int rowcount=ws.getLastRowNum();
+		int cellCount=ws.getRow(0).getLastCellNum();
 		String[][] inputData=new String[rowcount][cellCount];
 		
 		for (int i = 1; i <= rowcount; i++) {
@@ -30,7 +29,6 @@ public class ReadDataFromExcel {
 				else {
 					cellValue=ws.getRow(i).getCell(j).getStringCellValue();
 				}
-				
 				inputData[i-1][j]=cellValue;
 			}
 		}
