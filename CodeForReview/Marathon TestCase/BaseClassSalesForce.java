@@ -36,7 +36,6 @@ public class BaseClassSalesForce {
 		
 		driver.findElement(By.xpath("//label[contains(text(),'Search apps or items...')]/following-sibling::div/input")).sendKeys("Content");
 		driver.findElement(By.xpath("//mark[text()='Content']")).click();
-		//Thread.sleep(10000);
 	}
 	
 	  @Test(priority=3) 
